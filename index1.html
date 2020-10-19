@@ -1,0 +1,361 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="jquery.fancybox.min.css">
+	<title>Document</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+		.txt1{
+			font-family: 'Rubik Mono One', sans-serif;
+			color:white;
+		}
+		.Txt{
+			font-family: 'Rubik Mono One', sans-serif;
+			color:white;
+			transition: 2s;
+			font-size: 30px;
+			position: absolute;
+			top:45%;
+			left:40%;
+
+		}
+		.Txt:hover{
+			text-decoration: none;
+			color: #ffc222;
+			transition: 2s;
+		}
+		.markk{
+			height:100px;
+			width:100px;
+			margin-top: 100px;
+			
+			position:absolute;
+		}
+		.markk1{
+			height:60px;
+			width:130px;
+			margin-top: 100px;
+			
+			position:absolute;
+		}
+		.markk2{
+			height:70px;
+			width:130px;
+			margin-top: 100px;
+			
+			position:absolute;
+		}
+		.markk3{
+			height:80px;
+			width:100px;
+			margin-top: 100px;
+			
+			position:absolute;
+		}
+		@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }	
+
+		body{
+			background-size: cover;
+			-webkit-animation: fade-in 1.5s linear; 
+			-moz-animation: fade-in 1.5s linear; 
+			-o-animation: fade-in 1.5s linear;
+			animation: fade-in 1.5s linear; 
+			position:relative;
+			z-index:1;			
+		}	
+		.a {
+		 text-decoration: none;
+		  outline: none;
+		  display: inline-block;
+		  padding: 20px 30px;
+		  margin: 10px 20px;
+		  position: relative;
+		  color:white;
+		  border: 1px solid rgba(255,255,255,.4);
+		  background:;
+		  font-weight: 100;
+		  font-family: 'Rubik Mono One', sans-serif;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		  margin-left:130px;
+		  transition: 0.5s;
+		}
+		a:hover{
+			text-decoration: none;
+		}		
+		.mt{
+			margin-top:100px;
+			margin-left:790px;
+		}
+		#modalYes{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 16px;
+			height: 63%;
+			width:35%;
+			text-decoration: none;
+			overflow: hidden;
+
+		}
+		#modalNo{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 16px;
+			height: 58%;
+			text-decoration: none;
+			overflow: hidden;
+			
+		}
+		#mod{
+			text-decoration: underline;
+		}
+		#img1{
+			height: 400px;
+			width: 450px;
+			border:5px solid black;
+			position: absolute;
+			left:17%;
+		}
+		#img2{
+			height: 400px;
+			width: 450px;
+			border:5px solid black;
+			position: absolute;
+			left:33%;
+		}	
+		#modalbtn{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 16px;
+			text-decoration: none;
+		}
+		.mmt{
+			margin-top: 35%
+		}
+		.butt{
+			position: absolute;
+			top:69%;
+			left:-80%;
+		}
+	</style>
+</head>
+<body class="bg">
+		<div class="texta">
+			<h2 class="txt1 none">Количество вредителей:<span class="count">0</span></h2>
+			<h2 class="txt1 none1">Время:<span class="timerTxt">0</span></h2>
+		</div>
+		
+			<div class="hide2"><a data-fancybox data-src="#modalYes" href="javascript:;"  class="Txt pobeda">Количество убитых</a></div>
+			<div class="hide"><a data-fancybox data-src="#modalNo" href="javascript:;"  class="Txt proigrish">Количество убитых</a></div>
+
+
+		
+		<div id="modalYes">
+				<p>Ты вовремя ухлопал всех полузчих тварей на этой помойке.</p>
+				<img id="img1" src="img/BP109955.jpg" alt="">
+				<a href="index.html"><button class="btn-lg btn-dark a mt butt">Меню</button></a>
+		</div>
+		<div id="modalNo">
+			<p>Ты не уложился по времени и не смог ухлопать всех полузчих тварей на этой помойке.</p>
+			<img id="img2" src="img/istockphoto-1145569361-1024x1024.jpg" alt="">
+			<p class="mmt">Согласно правилу, в случае проигрыша, ты начинаешь все заново. Через <span class="timerTxt2">6</span> секунд запустится игра.</p>
+		</div>
+		<div class="pointy">
+			
+		</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="jquery.fancybox.min.js"></script>
+	<script src="anime.min.js"></script>
+	<script>
+		let countTxt = document.querySelector('.count');
+		let diedTxt = document.querySelector('.died');
+		let none = document.querySelector('.none');
+		let none1 = document.querySelector('.none1');
+		let count = 0;
+		let died = 0;
+		let timer = 0;
+		let timer2 = 6;
+		let timerTxt = document.querySelector('.timerTxt');
+		let timerTxt2 = document.querySelector('.timerTxt2');
+		let pobeda = document.querySelector('.pobeda');
+		let proigrish = document.querySelector('.proigrish');
+		let bg = document.querySelector('.bg');
+		let pointy = document.querySelector('.pointy');
+		let texta = document.querySelector('.texta');
+		let butt = document.querySelector('.butt');
+		let hide = document.querySelector('.hide');
+		let hide2 = document.querySelector('.hide2');
+		let modalbtn = document.getElementById('modalbtn');
+
+		let randomLeft = function(){
+			let rand = Math.random() * 1600;
+			let round = Math.round(rand);
+			return round;
+		}
+
+		let randomTop = function(){
+			let rand = Math.random() * 700;
+			let round = Math.round(rand);
+			return round;
+		}
+		
+		bg.style.backgroundImage = 'url(задания/rubbish.jpg)';
+		none.style.display = 'block';
+		none1.style.display = 'block';
+		hide.style.display = 'none';
+		hide2.style.display = 'none';
+		proigrish.style.opacity = 0;
+		pobeda.style.opacity = 0;
+		
+
+		let createPoint = function(){
+			
+			let point = document.createElement('img');
+			pointy.appendChild(point);
+			point.src = 'задания/image (1).png';
+			point.classList.add('markk');
+			point.style.left = randomLeft() + 'px';
+			point.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			let point1 = document.createElement('img');
+			pointy.appendChild(point1);
+			point1.src = 'задания/image (2).png';
+			point1.classList.add('markk1');
+			point1.style.top = 140 + 'px';
+			point1.style.left = randomLeft() + 'px';
+			point1.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			let point2 = document.createElement('img');
+			pointy.appendChild(point2);
+			point2.src = 'задания/image (3).png';
+			point2.classList.add('markk2');
+			point2.style.left = randomLeft() + 'px';
+			point2.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			let point3 = document.createElement('img');
+			pointy.appendChild(point3);
+			point3.src = 'задания/image.png';
+			point3.classList.add('markk3');
+			point3.style.left = randomLeft() + 'px';
+			point3.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			point.onclick = function(){
+				point.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point1.onclick = function(){
+				point1.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point2.onclick = function(){
+				point2.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point3.onclick = function(){
+				point3.style.display = 'none';
+				died = died + 1;
+				
+			}
+			
+			if(timer < 8){
+				if(died >= 10){
+					clearInterval(interval);
+					let predark1 = function(){
+						pointy.style.transition = '3s';
+						pointy.style.opacity = 0;
+						texta.style.transition = '3s';
+						texta.style.opacity = 0;
+					}
+					setTimeout(predark1,1000);
+					let postdark1 = function(){
+						bg.style.transition = '3s';
+						bg.style.backgroundImage = "url(задания/dark.jpg)";
+						hide2.style.display = 'block';
+						
+					}
+					setTimeout(postdark1,2500);
+					let text1 = function(){
+						pobeda.style.transition = '3s';
+						pobeda.style.opacity = 1;
+					}
+					setTimeout(text1,2700);
+				}
+			}
+			if(timer >= 8){
+				if(died < 10){
+					clearInterval(interval);
+					let predark2 = function(){
+						pointy.style.transition = '3s';
+						pointy.style.opacity = 0;
+						texta.style.transition = '3s';
+						texta.style.opacity = 0;
+					}
+					setTimeout(predark2,1000);
+					let postdark2 = function(){
+						bg.style.transition = '3s';
+						bg.style.backgroundImage = "url(задания/dark.jpg)";
+						hide.style.display = 'block';
+						
+					}
+					setTimeout(postdark2,2500);
+					let text2 = function(){
+						proigrish.style.transition = '3s';
+						proigrish.style.opacity = 1;
+						// document.location.href = "http://www.site.ru";
+									
+						proigrish.onclick = function(){
+							let time2 = function(){
+								timer2 = timer2 - 1;
+								timerTxt2.innerHTML = timer2;
+								if(timer2 == 0){
+									clearInterval(timeinterval2);
+								}
+								if(timer2 == 0){
+									document.location.href = "index1.html";	
+								}			
+							}	
+							let timeinterval2 = setInterval(time2,1300);	
+						}
+						
+						
+					}
+					setTimeout(text2,2700);
+					
+					
+				}
+			}	
+		}
+		let time = function(){
+			timer = timer + 1;
+			timerTxt.innerHTML = timer;
+			if(timer == 8){
+				clearInterval(timeinterval);
+			}			
+		}
+
+						
+		
+	let interval = setInterval(createPoint,1000);
+	let timeinterval = setInterval(time,1000);	
+	
+	</script>
+</body>
+</html>

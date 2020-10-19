@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="jquery.fancybox.min.css">
+	<title></title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+		.txt{
+			font-family: 'Rubik Mono One', sans-serif;
+			color:white;
+		}
+		.txt1{
+			font-family: 'Rubik Mono One', sans-serif;
+			color:white;
+		}
+		
+		@-webkit-keyframes fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@-moz-keyframes    fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@-o-keyframes      fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }
+		@keyframes         fade-in {   0% { opacity: 0.1; }   100% { opacity: 1; }   }	
+
+		body{
+			background-size: cover;
+			-webkit-animation: fade-in 1.5s linear; 
+			-moz-animation: fade-in 1.5s linear; 
+			-o-animation: fade-in 1.5s linear;
+			animation: fade-in 1.5s linear; 
+			position:relative;
+			z-index:1;			
+		}		
+		
+		
+		.a {
+		  text-decoration: none;
+		  outline: none;
+		  display: inline-block;
+		  padding: 20px 30px;
+		  margin: 10px 20px;
+		  position: relative;
+		  color:black;
+		  border: 1px solid rgba(255,255,255,.4);
+		  background:white;
+		  font-weight: 100;
+		  font-family: 'Rubik Mono One', sans-serif;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		  margin-left:130px;
+		  transition: 0.5s;
+		}		
+		.mt{
+			margin-top:100px;
+			margin-left:790px;
+		}
+		.h1{
+			 display: inline-block;
+			  opacity: 0;
+		}
+		#modal{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 13px;
+		}
+		#modalYes{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 16px;
+			height: 60%;
+			width:35%;
+			text-decoration: none;
+			
+
+		}
+		#modalNo{
+			display: none;
+			font-family: 'Rubik Mono One', sans-serif;
+			font-size: 16px;
+			height: 55%;
+			text-decoration: none;
+			
+			
+		}
+		#mod{
+			text-decoration: underline;
+		}
+		#img1{
+			height: 400px;
+			width: 450px;
+			border:5px solid black;
+			position: absolute;
+			left:20%;
+		}
+		#img2{
+			height: 400px;
+			width: 450px;
+			border:5px solid black;
+			position: absolute;
+			left:30%;
+
+		}
+		.location1{
+			display: block;
+			
+		}
+		.location2{
+			display: none;
+			
+		}
+		
+	</style>
+</head>
+<body class="bg">
+	<div class="location1">
+			<h2 class="txt none">Количество вредителей:<span class="count">0</span></h2>
+			<h2 class="txt none1">Время:<span class="timerTxt">0</span></h2>
+			<div class="prihlopni">
+				<span style="margin-top:300px;margin-left:650px" class="txt h1">П</span>
+				<span style="" class="txt h1">Р</span>
+				<span style="" class="txt h1">И</span>
+				<span style="" class="txt h1">Х</span>
+				<span style="" class="txt h1">Л</span>
+				<span style="" class="txt h1">О</span>
+				<span style="" class="txt h1">П</span>
+				<span style="" class="txt h1">Н</span>
+				<span style="" class="txt h1">И&nbsp</span>
+				
+				<span style="" class="txt h1">Н</span>
+				<span style="" class="txt h1">А</span>
+				<span style="" class="txt h1">С</span>
+				<span style="" class="txt h1">Е</span>
+				<span style="" class="txt h1">К</span>
+				<span style="" class="txt h1">О</span>
+				<span style="" class="txt h1">М</span>
+				<span style="" class="txt h1">О</span>
+				<span style="" class="txt h1">Г</span>
+				<span style="" class="txt h1">О</span>	
+			</div>
+			
+			<a href="index1.html"><button class="btn-lg btn-dark a mt butt ">Играть</button></a>
+			<a data-fancybox data-src="#modal" href="javascript:;" href="#"><button class="btn-lg btn-dark a butt1 ">Правила</button></a>
+			
+			<div id="modal">
+				<h2 id="mod">Все,что тебе нужно знать</h2>
+				<p>1.Уничтожь как можно больше вредителей</p>
+				<p>2.В противном случае, игра не закончится, пока не будет достигнуто определенного количества насекомьих смертей</p>
+				<p>3.Время ограничено: 8 секунд</p>
+			</div>
+			
+	</div>
+	
+
+	
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery.fancybox.min.js"></script>
+<script src="anime.min.js"></script>
+	<script>
+		
+		let animation = anime({
+		  targets: '.h1',
+		  opacity: 1,
+		  translateY: 50,
+		  delay: anime.stagger(30, {start: 400}),
+		  translateX: [-10, 30]
+		  
+		});		
+	</script>
+<script type="text/javascript">
+
+	let countTxt = document.querySelector('.count');
+	let pravila = document.getElementById('modal');
+	let alertFancy1 = document.getElementById('modalYes');
+	let alertFancy2 = document.getElementById('modalNo');
+	let diedTxt = document.querySelector('.died');
+	let none = document.querySelector('.none');
+	let butt = document.querySelector('.butt');
+	let butt1 = document.querySelector('.butt1');
+	let h1 = document.querySelectorAll('.h1');
+	let none1 = document.querySelector('.none1');
+	let bg = document.querySelector('.bg')
+	let count = 0;
+	let died = 0;
+	let timer = 0;
+	let timerTxt = document.querySelector('.timerTxt');
+	let pobeda = document.querySelector('.pobeda');
+	let proigrish = document.querySelector('.proigrish');
+	let location1 = document.querySelector('.location1');
+	let prihlopni = document.querySelector('.prihlopni');
+	
+
+	let randomLeft = function(){
+		let rand = Math.random() * 1600;
+		let round = Math.round(rand);
+		return round;
+	}
+
+	let randomTop = function(){
+		let rand = Math.random() * 700;
+		let round = Math.round(rand);
+		return round;
+	}
+	bg.style.backgroundImage = 'url(задания/menu.jpg)';
+	bg.style.backgroundSize = '100%';
+	location1.style.display = 'block';
+	none.style.display = 'none';
+	none1.style.display = 'none';
+	pobeda.style.display = 'none';
+	proigrish.style.display = 'none';
+	butt.onclick = function(){
+		location1.style.display = 'none';
+		bg.style.backgroundImage = 'url(задания/rubbish.jpg)';
+		
+		location2.style.display = 'block';
+		butt.style.display = 'none';
+		none.style.display = 'block';
+		none1.style.display = 'block';
+		prihlopni.style.display = 'none'
+		butt1.style.display = 'none';
+		
+		let createPoint = function(){
+			
+			
+			point.style.left = randomLeft() + 'px';
+			point.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			
+			point1.style.top = 140 + 'px';
+			point1.style.left = randomLeft() + 'px';
+			point1.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			
+			point2.style.left = randomLeft() + 'px';
+			point2.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			
+			point3.style.left = randomLeft() + 'px';
+			point3.style.top = randomTop() + 'px';
+			count = count + 1;
+			countTxt.innerHTML = count;
+
+			point.onclick = function(){
+				point.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point1.onclick = function(){
+				point1.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point2.onclick = function(){
+				point2.style.display = 'none';
+				died = died + 1;
+				
+			}
+			point3.onclick = function(){
+				point3.style.display = 'none';
+				died = died + 1;
+				
+			}
+			
+			if(timer < 8){
+				if(died >= 10){
+					clearInterval(interval);
+					let predark1 = function(){
+						bg.style.opacity = 0;
+						bg.style.transition = '3s';
+						bg.style.backgroundInage = 'url(задания/rubbish.jpg)';
+						butt.style.display = 'none';
+						butt1.style.display = 'none';
+						prihlopni.style.display = 'none';
+						none.style.display = 'none';
+						none1.style.display = 'none';
+					}
+					setTimeout(predark1,2000);
+					let postdark1 = function(){
+						bg.style.opacity = 1;
+						bg.style.transition = '3s';
+						location1.style.display = 'block';
+						pobeda.style.display = 'block';
+					}
+					setTimeout(postdark1,2500);
+				}
+			}
+			if(timer >= 8){
+				if(died < 10){
+					clearInterval(interval);
+					let predark2 = function(){
+						bg.style.opacity = 0;
+						bg.style.transition = '3s';
+						bg.style.backgroundInage = 'url(задания/rubbish.jpg)';
+						butt.style.display = 'none';
+						butt1.style.display = 'none';
+						prihlopni.style.display = 'none';
+						none.style.display = 'none';
+						none1.style.display = 'none';
+
+					}
+					setTimeout(predark2,2000);
+					let postdark2 = function(){
+						bg.style.opacity = 1;
+						bg.style.transition = '3s';
+						bg.style.backgroundImage = 'url(задания/menu.jpg)';
+						bg.style.backgroundSize = '100%';
+						proigrish.style.display = 'block';
+					}
+					setTimeout(postdark2,2500);
+					
+					
+				}
+			}	
+		}
+		let time = function(){
+			timer = timer + 1;
+			timerTxt.innerHTML = timer;
+			if(timer == 8){
+				clearInterval(timeinterval);
+			}			
+		}
+	let interval = setInterval(createPoint,1000);
+	let timeinterval = setInterval(time,1000);	}
+	
+</script>
+</body>
+</html>
